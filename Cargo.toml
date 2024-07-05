@@ -1,0 +1,17 @@
+[package]
+name = "rust_benchmarking_example"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[dev-dependencies]
+criterion = { version = "0.5.1", features = ["html_reports"] }
+
+[[bench]]
+name = "distance"
+harness = false
+
+# Disable compiler optimizations when running benchmarks, you probably don't want to do this!
+# [profile.bench]
+# opt-level = 0
